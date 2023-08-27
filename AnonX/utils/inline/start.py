@@ -9,23 +9,23 @@ def start_pannel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
     buttons = [
         [
             InlineKeyboardButton(
-                text="🌹𝐀ԃ𝐃 𝐌ҽ 𝐌σ𝐈 𝐋ꪮꪜ𝐄🌹",
+                text="ʕ˖͜͡˖ʔ𝐀𝐃𝐃 𝐌𝐄 𝐌𝐎𝐋 𝐋𝐎𝐕𝐄ʕ˖͜͡˖ʔ",
                 url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
             )
         ],
         [
             InlineKeyboardButton(
-                text="❤️𝐎ɯɳҽ𝐑❤️",
-                url=f"https://t.me/itsz_shivam",
+                text="ʕ˖͜͡˖ʔ𝐎𝐖𝐍𝐄𝐑ʕ˖͜͡˖ʔ",
+                url=f"https://t.me/N_O_B_I_T_A_007",
             )
         ],
         [
             InlineKeyboardButton(
-                text="💖𝐇ҽʅ𝐏💖",
+                text="ʕ˖͜͡˖ʔ𝐇𝐄𝐋𝐏ʕ˖͜͡˖ʔ",
                 callback_data="settings_back_helper",
             ),
             InlineKeyboardButton(
-                text="🌸𝐒ҽƚƚιɳɠ𝐒🌸", callback_data="settings_helper"
+                text="ʕ˖͜͡˖ʔ𝐒𝐄𝐓𝐓𝐈𝐍𝐆𝐒ʕ˖͜͡˖ʔ", callback_data="settings_helper"
             ),
         ],
      ]
@@ -36,24 +36,24 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
     buttons = [
         [
             InlineKeyboardButton(
-                text="•🌷𝐀ԃ𝐃 𝐌ҽ 𝐓σ 𝐘συ𝐑 𝐆ɾσυ𝐏🌷•",
+                text="•ʕ˖͜͡˖ʔ𝐀𝐃𝐃 𝐌𝐄 𝐓𝐎 𝐘𝐎𝐔𝐑 𝐆𝐑𝐎𝐔𝐏ʕ˖͜͡˖ʔ•",
                 url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
             )
         ],
         [
             InlineKeyboardButton(
-                text="🍒𝐂σɱɱαɳԃ𝐒🍒", callback_data="settings_back_helper"
+                text="ʕ˖͜͡˖ʔ𝐂𝐎𝐌𝐌𝐀𝐍𝐃𝐒ʕ˖͜͡˖ʔ", callback_data="settings_back_helper"
             ),
             InlineKeyboardButton(
-                text="🥀𝐅συɳԃҽ𝐑🥀", user_id=OWNER
+                text="ʕ˖͜͡˖ʔ𝐅𝐎𝐔𝐍𝐃𝐄𝐑ʕ˖͜͡˖ʔ", user_id=OWNER
             )
         ],
         [
             InlineKeyboardButton(
-                text="💘𝐆ɾσυ𝐏💘", url=config.SUPPORT_GROUP
+                text="ʕ˖͜͡˖ʔ𝐆𝐑𝐎𝐔𝐏", url=config.SUPPORT_GROUP
             ),
             InlineKeyboardButton(
-                text="💞𝐔ρ∂αтє𝐒💞", url=f"https://t.me/about_skshivam"
+                text="ʕ˖͜͡˖ʔ𝐔𝐏𝐃𝐀𝐓𝐄𝐒ʕ˖͜͡˖ʔ", url=f"https://t.me/about_skshivam"
             )
         ],
      ]
