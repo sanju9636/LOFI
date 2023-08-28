@@ -109,32 +109,40 @@ async def gen_thumb(videoid, user_id):
 
         crop_img = Image.open(f"cache/cropped{videoid}.png")
         logo = crop_img.convert("RGBA")
-        logo.thumbnail((385, 385), Image.LANCZOS)
-        width = int((1280 - 380) / 1.22)
+        logo.thumbnail((360, 360), Image.LANCZOS)
+        width = int((1280 - 380) / 2)
         background = Image.open(f"cache/temp{videoid}.png")
-        background.paste(logo, (width + 1, 28), mask=logo)
-        background.paste(x, (965, 420), mask=x)
+        background.paste(logo, (width + 1, 85), mask=logo)
+        background.paste(x, (1015, 390), mask=x)
         background.paste(image3, (0, 0), mask=image3)
 
         draw = ImageDraw.Draw(background)
         font = ImageFont.truetype("AnonX/assets/font2.ttf", 45)
         ImageFont.truetype("AnonX/assets/font2.ttf", 70)
-        arial = ImageFont.truetype("AnonX/assets/font2.ttf", 65)
+        arial = ImageFont.truetype("AnonX/assets/font2.ttf", 76)
         ImageFont.truetype("AnonX/assets/font.ttf", 30)
         para = textwrap.wrap(title, width=26)
         try:
             draw.text(
-                (70, 25),
-                f"STARTED PLAYING...",
+                (63, 267),
+                f"STARTED..",
                 fill="white",
                 stroke_width=5,
-                stroke_fill="black",
+                stroke_fill="red",
+                font=arial,
+            )
+            draw.text(
+                (890, 267),
+                f"PLAYING...",
+                fill="white",
+                stroke_width=5,
+                stroke_fill="red",
                 font=arial,
             )
             if para[0]:
                 text_w, text_h = draw.textsize(f"{para[0]}", font=font)
                 draw.text(
-                    (110, 130),
+                    (400, 491),
                     f"{para[0]}",
                     fill="white",
                     stroke_width=1,
@@ -144,7 +152,7 @@ async def gen_thumb(videoid, user_id):
             if para[1]:
                 text_w, text_h = draw.textsize(f"{para[1]}", font=font)
                 draw.text(
-                    (110, 183),
+                    (400, 544),
                     f"{para[1]}",
                     fill="white",
                     stroke_width=1,
@@ -155,7 +163,7 @@ async def gen_thumb(videoid, user_id):
             pass
         text_w, text_h = draw.textsize(f"Duration: {duration} Mins", font=arial)
         draw.text(
-            ((1280 - 45) / 1.46, 580),
+            ((1280 - 45) / 1.34, 597),
             f"{duration}",
             fill="white",
             stroke_width=2,
@@ -251,32 +259,40 @@ async def gen_qthumb(videoid, user_id):
 
         crop_img = Image.open(f"cache/cropped{videoid}.png")
         logo = crop_img.convert("RGBA")
-        logo.thumbnail((385, 385), Image.LANCZOS)
-        width = int((1280 - 380) / 1.22)
+        logo.thumbnail((360, 360), Image.LANCZOS)
+        width = int((1280 - 380) / 2)
         background = Image.open(f"cache/temp{videoid}.png")
-        background.paste(logo, (width + 1, 28), mask=logo)
-        background.paste(x, (965, 420), mask=x)
+        background.paste(logo, (width + 1, 85), mask=logo)
+        background.paste(x, (1015, 390), mask=x)
         background.paste(image3, (0, 0), mask=image3)
 
         draw = ImageDraw.Draw(background)
         font = ImageFont.truetype("AnonX/assets/font2.ttf", 45)
         ImageFont.truetype("AnonX/assets/font2.ttf", 70)
-        arial = ImageFont.truetype("AnonX/assets/font2.ttf", 65)
+        arial = ImageFont.truetype("AnonX/assets/font2.ttf", 76)
         ImageFont.truetype("AnonX/assets/font.ttf", 30)
         para = textwrap.wrap(title, width=26)
         try:
             draw.text(
-                (70, 25),
-                "ADDED TO QUEUE...",
+                (43, 274),
+                "ADDED TO..",
                 fill="white",
                 stroke_width=5,
-                stroke_fill="black",
+                stroke_fill="red",
+                font=arial,
+            )
+            draw.text(
+                (870, 267),
+                "QUEUE...",
+                fill="white",
+                stroke_width=5,
+                stroke_fill="red",
                 font=arial,
             )
             if para[0]:
                 text_w, text_h = draw.textsize(f"{para[0]}", font=font)
                 draw.text(
-                    (110, 130),
+                    (400, 491),
                     f"{para[0]}",
                     fill="white",
                     stroke_width=1,
@@ -286,7 +302,7 @@ async def gen_qthumb(videoid, user_id):
             if para[1]:
                 text_w, text_h = draw.textsize(f"{para[1]}", font=font)
                 draw.text(
-                    (110, 183),
+                    (400, 544),
                     f"{para[1]}",
                     fill="white",
                     stroke_width=1,
@@ -297,7 +313,7 @@ async def gen_qthumb(videoid, user_id):
             pass
         text_w, text_h = draw.textsize(f"Duration: {duration} Mins", font=arial)
         draw.text(
-            ((1280 - 45) / 1.46, 580),
+            ((1280 - 45) / 1.34, 597),
             f" {duration}",
             fill="white",
             stroke_width=2,
