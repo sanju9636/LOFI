@@ -1,5 +1,5 @@
 <h2 align="center">
-    ──「 Lofi Music 」──
+    ──「 Lofi 」──
 </h2>
 
 <p align="center">
